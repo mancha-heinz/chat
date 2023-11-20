@@ -10,7 +10,7 @@ wss.on("connection", (ws) => {
     ws.on("message", (data) => { // inf. msg
         // recebe msg e envia p/ todos os clientes q estão no serv
         wss.clients.forEach((client) => {
-            client.send(data.toString)
+            client.send(data.toString())
         })
     })
 
